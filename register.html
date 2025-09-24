@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapace</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #222223;
+        }
+        header {
+            background-color: #1c1c1e;
+            padding: 10px 0;
+            position: fixed;
+            height: 100%;
+            width: 90px;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-radius: 0px 20px 20px 0;
+            box-shadow: 0 0 15px #00fffb;
+            transition: width 0.3s ease;
+        }
+        header:hover {
+            width: 120px;
+        }
+        nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 20px 0;
+    position: relative; /* Important pour positionner le user-btn */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px; /* Ajoutez un peu d'espace en haut */
+}
+
+
+
+
+        nav ul button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            border-radius: 50%;
+            padding: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #00fffb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+
+        nav ul button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #007bff;
+        }
+        nav ul button svg {
+            width: 30px;
+            height: 30px;
+        }
+        .user-btn {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            border-radius: 50%;
+            padding: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #00fffb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        header:hover #logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #2c2c2e;
+            border-radius: 10px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0px 0px 50px #00fffb;
+        }
+
+        form h1{
+            color: #00fffb;
+            margin-bottom: 10px;
+        }
+
+        form input{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid rgba(255, 255, 255, .2);
+            outline: none;
+            box-shadow: 0px 0px 10px #00fffb;
+            border-radius: 10px;
+            background-color: #3a3a3c;
+            color: #f5fefe;
+        }
+        form .submit{
+            width: 340px;
+            padding: 10px;
+            background-color: #00fffbdb;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+        form .submit:hover{
+            background-color: #0056b3;
+        }
+        form .login{
+            margin-top: 10px;
+            color: #e3e3e3;
+        }
+        form .login a{
+            color: #00fffb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        form .login a:hover{
+            text-decoration: underline;
+        }
+        
+        .Log-links{
+            color: #f5fefe5c;
+        }
+        .OR{
+            font-size: 13px;
+        }
+
+        .google-log{
+            background-color: #17171770;
+            border: none;
+            width: 350px;
+            height: 45px;
+            border-radius: 50px;
+            margin: 0 0 20px 0;
+            cursor: pointer;
+        }
+
+        .google-log:hover{
+            background-color: #1c1c1dda;
+            box-shadow: #00fffb 0 0 20px;
+        }
+
+        .google{
+            width: 45px;
+            position: absolute;
+            display: block;
+        }
+
+        
+
+        .gtext{
+            color: #f5fefe5c;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <logo>
+            <img id="logo" src="assets/logo.png" alt="Logo">
+        </logo>
+        <ul>
+            <button><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></a></button>
+            <button><a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg></a></button>
+        </ul>
+        <button class="user-btn"><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg></a></button>
+    </nav>
+</header>
+    <form>
+        <h1>Register</h1>
+        <input type="text" placeholder="Username"><br>
+        <input type="email" placeholder="Email"><br>
+        <input type="password" placeholder="Password"><br>
+        <input type="password" placeholder="Confirm Password"><br>
+
+        <p class="Log-links">_______________<span class="OR">OR</span>________________</p>
+        <button class="google-log"><img class="google" src="assets/google-icon.png">  <p class="gtext">login with google</p></button>
+
+
+        <button class="submit" type="submit">Register</button>
+        <p class="login">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+</body>
+</html>
